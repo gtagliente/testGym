@@ -242,7 +242,6 @@ a.article, a.article:hover {
     transform: rotate(-45deg) translate(1px, -1px);
 }
 
-
 #sidebarCollapse.active span {
     transform: none;
     opacity: 1;
@@ -288,4 +287,45 @@ a.article, a.article:hover {
         padding:10px 10px;
     }
 
+
+    #sidebarCollapse span {
+        display:block;
+    }
+
+
+    #sidebarCollapse.active span {
+        width: 80%;
+        height: 2px;
+        margin: 0 auto;
+        display: block;
+        background: #555;
+        transition: all 0.5s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+        /* transition-delay: 0.2s; */
+    }
+
+    #sidebarCollapse span:first-of-type {
+        transform: none;
+    }
+    #sidebarCollapse span:nth-of-type(2) {
+        opacity: 1;
+    }
+    #sidebarCollapse span:last-of-type {
+        transform: none;
+    }
+
+    #sidebarCollapse.active span:first-of-type {
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+    #sidebarCollapse.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    #sidebarCollapse.active span:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+
+    #sidebarCollapse span {
+        transform: none;
+        opacity: 1;
+        margin: 5px auto;
+    } 
 }
